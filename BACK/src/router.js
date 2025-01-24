@@ -1,16 +1,12 @@
-import { Router } from 'express';
+import { Router } from "express";
+import authRoutes from "./routes/authRoute.js";
+import elevateRoutes from "./routes/elevateRoute.js";
+import userRoutes from "./routes/userRoute.js";
+
 const router = Router();
 
-// Import des routes
-import authRoutes from './routes/authRoute.js';
-import protectedRoutes from './routes/protectedRoute.js';
-import elevateRoutes from './routes/elevateRoute.js'
-
-// Chargement des routes de l'API
-router.use([
-  authRoutes,
-  elevateRoutes,
-  protectedRoutes
-]);
+router.use("/auth", authRoutes);
+router.use("/elevate", elevateRoutes);
+router.use("/info", userRoutes);
 
 export default router;
