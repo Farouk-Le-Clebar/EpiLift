@@ -1,18 +1,17 @@
-import { Router } from 'express';
-import { loginUser } from '../services/authService.js';
+import { Router } from "express";
+import { loginUser, registerUser } from "../services/authService.js";
+import { verifyAdmin } from "../services/userService.js";
 
 const authRoutes = Router();
 
-authRoutes.get('/auth', (req, res) => {
-  console.log('lecture process.env.JWT_SECRET', process.env.JWT_SECRET);
-  res.send("api d'authentification");
-});
+// [AUTH] Route pour crée un nouvel utilisateur Zebi
+authRoutes.post("/register", verifyAdmin, registerUser);
 
-authRoutes.post('/auth', (req, res) => {
-  console.log('lecture process.env.JWT_SECRET', process.env.JWT_SECRET);
-  res.send("api d'authentification");
-});
+// [AUTH] Route pour se connecter
+authRoutes.post("/login", loginUser);
 
-authRoutes.post('/login', loginUser);
+// [AUTH] Route pour se déconnecter
+// authRoutes.delete("/sessions", logoutUser); j'ai pas fait le logout
+
 
 export default authRoutes;
