@@ -10,7 +10,7 @@
     "start:dev": "env-cmd -f .env.development nodemon index.js",
     "start:prod": "env-cmd -f .env.production nodemon index.js"
   },
-  "author": "Akkodis",
+  "author": "FaroukLeClebar",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
