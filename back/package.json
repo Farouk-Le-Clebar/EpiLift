@@ -13,6 +13,7 @@
   "author": "Akkodis",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "env-cmd": "^10.1.0",
@@ -21,7 +22,7 @@
     "https": "^1.0.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "mysql2": "^3.11.2",
+    "mysql2": "^3.12.0",
     "node-fetch": "^3.3.2",
     "nodemon": "^3.0.1",
     "react-slide-button": "^2.0.0",
