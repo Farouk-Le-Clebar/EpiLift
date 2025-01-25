@@ -1,0 +1,12 @@
+html, body { height: 100%; }
+body { margin: 0; background-color: #151515 }
+
+@font-face {
+    font-family: 'EpiLiftRegular';
+    src: url('../public/font/UberMoveMedium.otf');
+}
+
+@font-face {
+    font-family: 'EpiLiftBold';
+    src: url('../public/font/UberMoveBold.otf');
+}

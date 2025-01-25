@@ -1,0 +1,17 @@
+<div class="login-background">
+    <div class="login-title-container">
+        <div class="login-title-text-container">
+            <h1 class="login-title">Automatic</h1>
+            <h1 class="login-title">Epitech</h1>
+            <h1 class="login-title">Elevator</h1>
+        </div>
+        <div class="login-title-button-container">
+            <button class="login-title-credits-button" [class.expanded]="isCreditExpanded" (click)="onCreditsClick()">
+                <img src="loginPage/credits.svg" class="login-title-credits-icon">
+            </button>
+        </div>
+    </div>
+    <div class="login-form-container">
+        <app-login-system></app-login-system>
+    </div>
+</div>

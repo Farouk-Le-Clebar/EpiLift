@@ -1,0 +1,7 @@
+<div class="login-background" [class.expanded]="isExpanded">
+    <input *ngIf="isExpanded" type="email" placeholder="Email" class="login-input-field" [(ngModel)]="loginObj.email" />
+    <input *ngIf="isExpanded" type="password" placeholder="Mot de passe" class="login-input-field" [(ngModel)]="loginObj.password" />
+    <button class="login-button-connect" [class.expanded]="isExpanded" (click)="onConnectClick()">
+        <p class="login-button-connect-text">Se connecter</p>
+    </button>
+</div>
